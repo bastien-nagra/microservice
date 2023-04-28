@@ -154,12 +154,12 @@ Rick can be replaced with any character name.
 This service will act as the entry to your deployment. You will need to redirect incoming request to either TSC or RMC based on the request url:
 
 
-| HTTP Method|Entry endpoint on nginx 	  | Targeted service | Endpoint in targeted service   |
-|------------|----------------------------|----------------------------------------------------
-| GET        | /tsc/shows                 | TSC              | /api/v1/shows/1                |
-| GET        | /tsc/shows/1               | TSC              | /api/v1/shows/1                |
-| GET        | /tsc/shows/1/characters    | TSC              | /api/v1/shows/1/characters     |
-| GET        | /rmc/characters/?name=rick | RMC              | /api/v1/characters/?name=rick  |
+| HTTP Method | Entry endpoint on nginx    | Targeted service | Endpoint in targeted service   |
+|-------------|----------------------------|------------------|--------------------------------|
+| GET         | /tsc/shows                 | TSC              | /api/v1/shows/1                |
+| GET         | /tsc/shows/1               | TSC              | /api/v1/shows/1                |
+| GET         | /tsc/shows/1/characters    | TSC              | /api/v1/shows/1/characters     |
+| GET         | /rmc/characters/?name=rick | RMC              | /api/v1/characters/?name=rick  |
 
 
 ## FrontEnd/UI (For blue team only : Devaiah / Varshini)
