@@ -4,10 +4,10 @@
 This is the second assignment. During this project, you will build microservices and make them interact together in a prod-like deployment. You will implement services that return informations about various tv-shows. 
 
 In this first part, we will focus on implementing a basic infrastructure with services implementing REST APIs and fetching data from various sources.
-In the second part, you will extend the functionnalities of each services and the infrastructure.
+In the second part, you will extend the functionnalities of each services, improve the infrastructure and automate the delivery of your applications.
 
 ## Execution
-You will be working in group of three to four persons. For each services describe below, there is a recommendation regarding which team member should pick up that implementation.
+You will be working in group of three to four persons. For each services describe below, there is a recommendation regarding which team member should pick up that implementation. 
 
 ## Objective
 You will need to setup the infrastructure below made of docker containers :
@@ -15,10 +15,10 @@ You will need to setup the infrastructure below made of docker containers :
 
 
 ## Initial setup in Intellij (for Java developpers)
-In this repository you can find a dummy REST API that returns a Hello World message. You can start from this to create your own service.
+In this repository you can find a dummy API that returns a Hello World message. You can start from this to create your own service.
 1. Open the project in Intellij.
-2. Select the JDK 20 for the project
-3. Download the maven dependencies (should happen automatically)
+2. Select the JDK 20 for the project.
+3. Download the maven dependencies (should happen automatically in the background).
 4. Run the program, you should see your spring boot server log :
 ![](doc/SpringBoot_initial_startup.png)
 5. Looking at the server logs, find out how to access the webserver from your browser.
@@ -27,9 +27,10 @@ In this repository you can find a dummy REST API that returns a Hello World mess
 # Services
 All services will run in dedicated docker containers, including frontends, DB and NGINX. Both Java services will implement a REST API.
 
-Each service will need a dedicated github repo (on repo per service per group). Everything required to deploy your whole project must be pushed on those repository.
+Each service will need a dedicated github repo (on repo per service per group). Everything required to deploy your whole project must be pushed on those repository (source code, Dockerfile, configuration files, DB scripts, ...).
 ## DB (For Java developpers or SRE)
-In the first stage, you will create a schema for your DB and manually insert records using SQL command. You will need to implement that schema (fields with white diamond next should be optional when inserting data in DB) :
+In the first stage, you will create a schema for your DB and manually insert records using SQL command. The DB must be running in a docker container.
+You will need to implement that schema (fields with white diamond symbol are optional when inserting data in DB) :
 
 ![](doc/db_model.png)
 
@@ -40,7 +41,7 @@ This service will run on SpringBoot and interact with the DB to provide data bac
 
 You will need to implement the endpoint below to fetch data previously inserted in the DB using hibernate. Response is in json format.
 
-Here is the two interfaces that you will need to implement, with an example for the tv_shows with id 1 :
+Here is the three interfaces that you will need to implement, with an example for the tv_shows with id 1 :
 
     
     Method : GET
@@ -91,7 +92,6 @@ Here is the two interfaces that you will need to implement, with an example for 
     HTTP Code : 200
     Returns :
     {
-        "title": "...",
         "characters": [
             {
                 "id": 1
