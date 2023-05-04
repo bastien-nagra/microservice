@@ -110,7 +110,7 @@ Here are the three interfaces that you will need to implement, with an example f
         ]
     }
 
-In case the show with id 1 is not found, you should return an empty payload with an HTTP Code 404 (not found).
+In case the show with id 1 is not found, you should return an error with HTTP Code 404 (not found).
 
 ## Rick and Morty Characters Service - RMC (for Java developers)
 This service will run on Spring boot and fetch data from rickandmortyapi.com.
