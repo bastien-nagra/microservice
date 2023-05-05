@@ -1,5 +1,6 @@
 # Second assignment - Microservice: Part 1
 
+[Part 2 link](README_part2.md)
 ## Introduction
 This is the second assignment. During this project, you will build microservices and make them interact together in a prod-like deployment. You will implement services that return pieces of information about various tv-shows. 
 
